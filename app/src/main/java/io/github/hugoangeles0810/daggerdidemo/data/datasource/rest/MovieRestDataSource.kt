@@ -4,8 +4,10 @@ import io.github.hugoangeles0810.daggerdidemo.data.datasource.MovieDataSource
 import io.github.hugoangeles0810.daggerdidemo.data.datasource.rest.api.ApiMovie
 import io.github.hugoangeles0810.daggerdidemo.data.mapper.DiscoverMoviesResponseMapper
 import io.github.hugoangeles0810.daggerdidemo.domain.entities.Movie
+import javax.inject.Inject
 
-class MovieRestDataSource(private val apiMovie: ApiMovie) : BaseRestDataStore(), MovieDataSource {
+class MovieRestDataSource
+    @Inject constructor(private val apiMovie: ApiMovie) : BaseRestDataStore(), MovieDataSource {
 
     private val mapper: DiscoverMoviesResponseMapper by lazy { DiscoverMoviesResponseMapper() }
 

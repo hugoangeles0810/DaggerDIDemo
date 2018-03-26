@@ -3,9 +3,11 @@ package io.github.hugoangeles0810.daggerdidemo.data.repositories
 import io.github.hugoangeles0810.daggerdidemo.data.datasource.ConfigurationDataSource
 import io.github.hugoangeles0810.daggerdidemo.data.datasource.MovieDataSource
 import io.github.hugoangeles0810.daggerdidemo.domain.entities.Movie
+import javax.inject.Inject
 
 
-class MovieRepository(private val movieDataSource: MovieDataSource,
+class MovieRepository
+    @Inject constructor(private val movieDataSource: MovieDataSource,
                       private val configurationDataSource: ConfigurationDataSource) {
 
     fun listMovies(): List<Movie> {

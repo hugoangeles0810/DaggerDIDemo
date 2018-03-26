@@ -3,8 +3,10 @@ package io.github.hugoangeles0810.daggerdidemo.presentation.main
 import io.github.hugoangeles0810.daggerdidemo.R
 import io.github.hugoangeles0810.daggerdidemo.domain.entities.Movie
 import io.github.hugoangeles0810.daggerdidemo.domain.interactor.ListMoviesInteractor
+import javax.inject.Inject
 
-class MainPresenterImpl(private val listMoviesInteractor: ListMoviesInteractor) : MainPresenter {
+class MainPresenterImpl
+    @Inject constructor(private val listMoviesInteractor: ListMoviesInteractor) : MainPresenter {
 
     private var mView: MainView? = null
 

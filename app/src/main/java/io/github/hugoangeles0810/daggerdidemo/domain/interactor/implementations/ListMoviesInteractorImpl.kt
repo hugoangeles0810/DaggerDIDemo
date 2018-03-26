@@ -6,8 +6,10 @@ import io.github.hugoangeles0810.daggerdidemo.data.repositories.MovieRepository
 import io.github.hugoangeles0810.daggerdidemo.domain.executor.InteractorExecutor
 import io.github.hugoangeles0810.daggerdidemo.domain.executor.MainThreadExecutor
 import io.github.hugoangeles0810.daggerdidemo.domain.interactor.ListMoviesInteractor
+import javax.inject.Inject
 
-class ListMoviesInteractorImpl(
+class ListMoviesInteractorImpl
+    @Inject constructor(
         interactorExecutor: InteractorExecutor,
         mainThreadExecutor: MainThreadExecutor,
         private val moviesRepository: MovieRepository) : AbstractInteractor<ListMoviesInteractor.Callback, Any>(interactorExecutor, mainThreadExecutor),
