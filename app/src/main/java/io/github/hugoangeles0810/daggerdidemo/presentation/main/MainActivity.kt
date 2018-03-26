@@ -93,6 +93,11 @@ class MainActivity : AppCompatActivity(), MainView {
         rvMovies.adapter = adapter
     }
 
+    override fun onDestroy() {
+        presenter.detach()
+        super.onDestroy()
+    }
+
     override fun showError(message: String) {
         snackbar?.dismiss()
         snackbar = Snackbar.make(container, message, Snackbar.LENGTH_LONG)
