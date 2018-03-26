@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">DaggerDIDemo</string>
+    <string name="app_name">Dagger DI Demo</string>
+
+    <!-- Error Messages -->
+    <string name="common.error.network">Revise su conexión a internet</string>
+    <string name="common.error.server">Tenemos incovenientes para obtener la información, inténtelo en unos momentos</string>
+    <string name="common.error.unknown">Imposible realizar la acción inténtelo en unos momentos</string>
+    <string name="common.movies">Movies</string>
+    <string name="common.shows">TV Shows</string>
 </resources>
